@@ -1,0 +1,64 @@
+body, input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#forca{
+    border-top: solid black 9px;
+    border-left: solid black 9px;
+    width: 200px;
+    height: 450px;
+    left: 5%;
+    top: 5%;
+    position: absolute;
+}
+#forca img{
+    width: 300px;
+    position: absolute;
+    left: 25%;
+}
+#palavra{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    height: 300px;
+    font-size: 75pt;
+    align-items: end;
+    gap: 10px;
+}
+.letra{
+    border-bottom: solid black 7px;
+    width: 80px;
+    text-align: center;
+}
+#resultados{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    top: 10%;
+    right: 5%;
+    font-size: 30pt;
+}
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+#input{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    flex-direction: column;
+    gap: 20px;
+    top: 5%;
+    left: 25%;
+    font-size: 20pt;
+}
+#mensagem{
+    font-size: 20pt;
+    text-align: center;
+}

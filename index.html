@@ -2,143 +2,15 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio - Nicolas</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #0f0;
-      font-family: 'Orbitron', sans-serif;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    /* Background animado estilo grid neon */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        rgba(0,255,0,0.2) 0px,
-        rgba(0,255,0,0.2) 1px,
-        transparent 1px,
-        transparent 40px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        rgba(0,255,0,0.2) 0px,
-        rgba(0,255,0,0.2) 1px,
-        transparent 1px,
-        transparent 40px
-      );
-      animation: moveGrid 10s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes moveGrid {
-      from { background-position: 0 0; }
-      to { background-position: 40px 40px; }
-    }
-
-    header {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #0f0;
-      box-shadow: 0 0 20px #0f0;
-    }
-
-    h1, h2 {
-      color: #0f0;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      animation: neonPulse 2s infinite alternate;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #0f0;
-      font-weight: bold;
-      transition: 0.3s;
-      animation: neonGlow 3s infinite alternate;
-    }
-
-    nav a:hover {
-      color: #fff;
-      text-shadow: 0 0 15px #0f0;
-    }
-
-    section {
-      padding: 60px 40px;
-      border-bottom: 1px solid #0f0;
-      position: relative;
-      animation: fadeIn 2s ease-in;
-    }
-
-    section::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      box-shadow: 0 0 30px #0f0 inset;
-      opacity: 0;
-      transition: opacity 0.8s;
-    }
-
-    section:target::before {
-      opacity: 1;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      margin: 10px 0;
-    }
-
-    a {
-      color: #0f0;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-shadow: 0 0 12px #0f0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #111;
-      border-top: 2px solid #0f0;
-      box-shadow: 0 0 20px #0f0;
-    }
-
-    /* Animações */
-    @keyframes neonPulse {
-      from { text-shadow: 0 0 5px #0f0, 0 0 10px #0f0; }
-      to { text-shadow: 0 0 20px #0f0, 0 0 40px #0f0; }
-    }
-
-    @keyframes neonGlow {
-      from { text-shadow: 0 0 5px #0f0; }
-      to { text-shadow: 0 0 15px #0f0, 0 0 30px #0f0; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <title>Portfólio - Nicolas Encide</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Portfólio Nicolas</h1>
+    <h1>Nicolas Encide</h1>
     <nav>
       <a href="#sobre">Sobre Mim</a>
       <a href="#projetos">Projetos</a>
@@ -148,26 +20,117 @@
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou um profissional dedicado, com experiência em desenvolvimento e foco em criar soluções eficientes e bem estruturadas.</p>
+    <p>
+      Sou estudante de <strong>Sistemas para Internet</strong> na <strong>Fatec Jales</strong>, apaixonado por 
+      desenvolvimento de software e soluções digitais.
+    </p>
+    <p>
+      Participei de projetos acadêmicos e pessoais que envolvem <strong>aplicativos móveis</strong>, 
+      <strong>sistemas web</strong> e integração com <strong>APIs</strong>, sempre aplicando boas práticas de 
+      arquitetura e usabilidade. Meu objetivo é atuar como desenvolvedor, 
+      contribuindo para criar soluções tecnológicas que impactem positivamente empresas e usuários.
+    </p>
+    <p>
+      Além das habilidades técnicas, valorizo <strong>trabalho em equipe</strong>, <strong>comunicação clara</strong> 
+      e <strong>aprendizado contínuo</strong>, buscando sempre evoluir como profissional e entregar resultados de qualidade.
+    </p>
+
+    <div class="skills">
+      <h3>Habilidades Técnicas</h3>
+      <div class="skills-icons">
+    <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" title="HTML5">
+      <i class="fab fa-html5"></i>
+    </a>
+    <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" title="CSS3">
+      <i class="fab fa-css3-alt"></i>
+    </a>
+    <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" title="JavaScript">
+      <i class="fab fa-js"></i>
+    </a>
+    <a href="https://reactnative.dev/" target="_blank" title="React Native">
+      <i class="fab fa-react"></i>
+    </a>
+    <a href="https://www.php.net/" target="_blank" title="PHP">
+      <i class="fab fa-php"></i>
+    </a>
+    <a href="https://www.java.com/" target="_blank" title="Java">
+      <i class="fab fa-java"></i>
+    </a>
+    <a href="https://spring.io/" target="_blank" title="Spring">
+      <i class="fas fa-leaf"></i>
+    </a>
+    <a href="https://learn.microsoft.com/dotnet/csharp/" target="_blank" title="C#">
+      <i class="fab fa-microsoft"></i>
+    </a>
+    <a href="https://www.python.org/" target="_blank" title="Python">
+      <i class="fab fa-python"></i>
+    </a>
+    <a href="https://www.postgresql.org/" target="_blank" title="PostgreSQL">
+      <i class="fas fa-database"></i>
+    </a>
+    <a href="https://firebase.google.com/" target="_blank" title="Firebase">
+      <i class="fas fa-fire"></i>
+    </a>
+    <a href="https://git-scm.com/" target="_blank" title="Git">
+      <i class="fab fa-git-alt"></i>
+    </a>
+    <a href="https://github.com/" target="_blank" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.docker.com/" target="_blank" title="Docker">
+      <i class="fab fa-docker"></i>
+    </a>
+    <a href="https://www.linux.org/" target="_blank" title="Linux">
+      <i class="fab fa-linux"></i>
+    </a>
+  </div>
+    </div>
+
   </section>
+
 
   <section id="projetos">
     <h2>Projetos</h2>
     <ul>
-      <li><a href="https://github.com/seuusuario/projeto1">Projeto 1</a> - Breve descrição do projeto.</li>
-      <li><a href="https://github.com/seuusuario/projeto2">Projeto 2</a> - Breve descrição do projeto.</li>
+      <li>
+        <a href="https://github.com/NicolasEncide/RefriGestor" target="_blank">
+          <strong>Refrigestor</strong><br><br>
+          Aplicativo móvel para gestão e manutenção direcionado a microempreendedores e pequenas empresas no ramo de refrigeração.
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/NicolasEncide/CatalogoJames" target="_blank">
+          <strong>Catálogo de Produtos</strong><br><br>
+          Sistema web para gerenciamento de produtos desenvolvido em Java Spring.
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/NicolasEncide/Website-for-Dattebayo-API" target="_blank">
+          <strong>Website for Dattebayo API</strong><br><br>
+          Site construído com a API Dattebayo que mostra informações dos personagens de Naruto.
+        </a>
+      </li>
+      <li>
+        <a href="Forca/index.html" target="_blank">
+          <strong>Jogo da Forca</strong><br><br>
+          Jogo da forca desenvolvido em JavaScript, HTML e CSS.
+        </a>
+      </li>
     </ul>
+
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: <a href="mailto:seuemail@gmail.com">seuemail@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/seuusuario">linkedin.com/in/seuusuario</a></p>
-    <p>GitHub: <a href="https://github.com/seuusuario">github.com/seuusuario</a></p>
+    <div class="social-icons">
+      <a href="mailto:nicolas.sousa01@aluno.cps.sp.gov.br" title="Email"><i class="fas fa-envelope fa-3x"></i></a>
+      <a href="https://instagram.com/nicolas_encide" target="_blank" title="Instagram"><i class="fab fa-instagram fa-3x"></i></a>
+      <a href="https://github.com/NicolasEncide" target="_blank" title="GitHub"><i class="fab fa-github fa-3x"></i></a>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 Nicolas - Todos os direitos reservados.</p>
+    <p>&copy; 2026 Nicolas Encide - Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>

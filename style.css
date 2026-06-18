@@ -1,0 +1,244 @@
+body {
+  background-color: #000;
+  color: #ccc;
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,255,0,0.2) 0px,
+    rgba(0,255,0,0.2) 1px,
+    transparent 1px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    90deg,
+    rgba(0,255,0,0.2) 0px,
+    rgba(0,255,0,0.2) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+  animation: moveGrid 10s linear infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  background: #111;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #0f0;
+  box-shadow: 0 0 20px #0f0;
+}
+
+h1, h2, h3 {
+  color: #0f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: neonPulse 2s infinite alternate;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0f0;
+  font-weight: bold;
+  transition: 0.3s;
+  animation: neonGlow 3s infinite alternate;
+}
+
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px #0f0;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  font-weight: 400;
+  font-family: 'Exo 2', sans-serif;
+}
+
+strong {
+  color: #0f0;
+  font-weight: 700;
+  text-shadow: 0 0 8px #0f0;
+}
+
+section {
+  padding: 60px 40px;
+  border-bottom: 1px solid #0f0;
+  position: relative;
+  animation: fadeIn 2s ease-in;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  box-shadow: 0 0 30px #0f0 inset;
+  opacity: 0;
+  transition: opacity 0.8s;
+  pointer-events: none;
+}
+
+section:target::before {
+  opacity: 1;
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  font-weight: 300;
+}
+
+#sobre strong {
+  color: #0f0;
+  font-weight: 700;
+  text-shadow: 0 0 8px #0f0;
+}
+
+
+#projetos ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+#projetos li {
+  list-style: none;
+}
+
+#projetos a {
+  display: block;
+  background: #111;
+  border: 2px solid #0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #0f0;
+  font-size: 1.2rem;
+  color: #0f0;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, text-shadow 0.3s;
+}
+
+#projetos a strong {
+  color: #0f0;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#projetos a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0f0;
+  text-shadow: 0 0 12px #0f0;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 2px solid #0f0;
+  box-shadow: 0 0 20px #0f0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 2.5rem;
+  transition: 0.3s;
+  animation: neonGlow 2s infinite alternate, pulseIcon 2s infinite alternate;
+}
+
+.social-icons a:hover {
+  color: #0f0;
+  text-shadow: 0 0 15px #0f0;
+  transform: scale(1.2);
+}
+
+.skills {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.skills h3 {
+  color: #0f0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: neonPulse 2s infinite alternate;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skills-icons i {
+  font-size: 3rem;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.skills-icons i:hover {
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  transform: scale(1.2);
+}
+
+
+/* Animações */
+@keyframes neonPulse {
+  from { text-shadow: 0 0 5px #0f0, 0 0 10px #0f0; }
+  to { text-shadow: 0 0 15px #0f0, 0 0 20px #0f0; }
+}
+
+@keyframes neonGlow {
+  from { text-shadow: 0 0 5px #0f0; }
+  to { text-shadow: 0 0 15px #0f0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseIcon {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes moveGrid {
+  from { background-position: 0 0; }
+  to { background-position: 40px 40px; }
+}
+
+@media (max-width: 768px) {
+  .skills-icons i {
+    font-size: 2rem;
+  }
+  #projetos a {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
